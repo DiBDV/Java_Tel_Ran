@@ -1,0 +1,115 @@
+DevOps Tasks.
+
+#1.
+ Создать текстовый файл  /home/user/start/1.txt , создав перед этим необходимую директорию.
+   Добавить слово Start в текстовый документ, созданный ранее.
+   Дописать в конец документа текущую дату, использовав date (запуск командой date).
+   Скопировать получившийся документ в /opt/task/start.txt (Предварительно создаем необходимую директорию)
+   В документ /opt/task/start.txt  дописать последние 4 строчки из списка файлов, лежащих в /
+   
+
+*   Заменить в документе /opt/task/start.txt  слово root на ваше имя c помощью vi или nano
+
+***   Историю команд запишите в любой файл, который можно “скачать” при помощи команды 
+export_file   полный путь к файлу
+В моем случае export_file /tmp/history, где history - имя файла с результатом сравнения
+
+
+##############################################################
+######           Result                       ################
+##############################################################
+history -tail -20
+  327  ail  ll
+  328  ail  touch 1.txt
+  329  ail  ll
+  330  ail  Start >> 1.txt
+  331  ail  echo "Start" >> 1.txt
+  332  ail  ll
+  333  ail  less 1.txt
+  334  ail  date >> 1.txt
+  335  ail  less 1.txt
+  336  ail  ll /opt
+  337  ail  ll
+  338  ail  mkdir /opt/task
+  339  ail  sudo mkdir /opt/task
+  340  ail  ll /opt/task
+  341  ail  cp 1.txt /opt/task/start.txt
+  342  ail  sudo cp 1.txt /opt/task/start.txt
+  343  ail  less /opt/task/start.txt
+  344  ail  ll / | tail -4 >> /opt/task/start.txt
+  345  ail  sudo ll / | tail -4 >> /opt/task/start.txt
+  346  ail  sudo su
+
+
+# from $ less /opt/task/start.txt
+
+  Start
+Sun Mar  1 22:08:03 CET 2020
+drwxr-xr-x@  63 DiBDV  wheel  2016 Feb  8 18:55 sbin
+lrwxr-xr-x@   1 DiBDV  admin    11 Oct 11 09:00 tmp -> private/tmp
+drwxr-xr-x@  11 DiBDV  wheel   352 Oct 11 09:00 usr
+lrwxr-xr-x@   1 DiBDV  admin    11 Oct 11 09:00 var -> private/var
+
+
+#2.
+echo -e '#!/bin/bash\n date\n echo "it works!"' > /tmp/script.sh
+
+
+
+#3.
+Создайте файл myfirstbashscript.sh где угодно. 
+Сделайте его исполняемым. 
+Добавьте в него все необходимое, чтобы он 
+	Написал дату
+	Поприветствовал Вас по имени
+	Написал, из какой директории он работает
+	Добавил количество процессов одним числом ( не забудьте, что первая строка не выводит сам процесс, а лишь заголовок). 
+            Добавил количество процессов bioset одним числом (без процесса grep) 
+	Записал права на файл (-rw-r--r--)  файла /etc/passwd (только их)
+     Что вам понадобится: 
+       echo, pwd, ps -ef, date, grep (и c -v), cat, wc -l, tail +n (строка), awk {'print $НОМЕР СТОЛБЦА'}
+
+##############################################################
+######           Result                       ################
+##############################################################
+$ ./myfirstbashscript.sh
+Sun Mar  1 22:46:48 CET 2020
+Hey DiBDV!
+/Users/dibdv/Documents/Java_Tel_Ran/DevOps/telran10
+     469
+-rw-r--r--
+
+
+
+
+#4.
+Write bash script in $HOME/YOURNAME that:
+1) Creates 200 files with file mask ( 001_3287462387.txt 002_248529345.txt 003_23432423.txt ... 00200_329428374.txt) where 00 is a permenent prefix, 1 2 3 ...200 increases incrementally, and a random goes after _
+2) Same, but add date to the filename after random
+3) * Same but files should be created once per second and timestamp in filename  should have seconds
+4) ** Same as in #1, but the pattern is 001_312434213.txt ....  010_23423423.txt .... 100_234234234.txt 200_32984293.txt
+
+
+
+##############################################################
+######           Result                       ################
+##############################################################
+
+
+
+
+#5.
+Homework. 
+Склонируйте репозиторий или один файл https://github.com/aliaskov/telran10/blob/master/HP.txt или сделайте fork 
+Посчитайте сколько раз в тексте встречается слово Harry
+Замените имя Harry на свое и сохраните новый вариант
+результат можете отправить себе в новый репозиторий или просто запушьте изменения, если вы форкали репозиторий 
+
+
+##############################################################
+######           Result                       ################
+##############################################################
+
+
+
+
