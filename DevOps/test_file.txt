@@ -1,0 +1,2 @@
+machdep.cpu.vendor: GenuineIntel
+Thu Feb 27 19:35:18 CET 2020
