@@ -1,0 +1,46 @@
+already finished in C development.
+	arrays
+
+
+
+===========================================
+Intelli J IDE
+
+Java.
+
+Structure:
+JDK = SDK
+	JRE (java runtime environment)
+		JVM (виртуальная машина Java)
+		Library
+	JAVAC (compiler)
+	Library
+	docs
+	plugins
+
+код пишется для любой ОС
+
+
+Папка для всех проектов в одном месте.
+
+===========================================
+Interlli J IDE
+
+Project name
+Project location
+
+folder 'src'
+дальнейшая работа в этой папке
+src -> new (package)
+	com.telran.project1
+		new -> java class (camelCaseNaming)
+			Класс всегда начинается с большой буквы
+	com.telran.project2
+
+
+===========================================
+размеры переменных
+	JavaRush
+
+
+join.me download for skype.
