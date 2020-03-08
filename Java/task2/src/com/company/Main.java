@@ -27,5 +27,5 @@ public class Main {
 //написать метод сравнения дат и вставить в алгоритм сортировки
 
 public int compareDate (Date date1, Date date2){
-    
+
 }
