@@ -2,8 +2,7 @@ package telran.application;
 
 import telran.data.Car;
 
-import static telran.data.Car.printArrayCar;
-import static telran.data.Car.sortCarsByYear;
+import static telran.data.Car.*;
 
 public class CarApp {
     public static void main(String[] args) {
@@ -16,6 +15,8 @@ public class CarApp {
         printArrayCar(cars);
         sortCarsByYear(cars);
         System.out.println();
+        sortCarsWithComparator(cars);
         printArrayCar(cars);
+
     }
 }

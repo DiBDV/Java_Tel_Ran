@@ -35,6 +35,25 @@ public class Car {
 
         }
     }
+
+    public static void sortCarsWithComparator(Car[] cars){
+        for (int i = 0; i < cars.length -1; i++) {
+            for (int j = 0; j < (cars.length -1) - i; j++) {
+                if(compareCars(cars[j], cars[j + 1]) < 0){
+                    Car temp = cars[j];
+                    cars[j] = cars[j+1];
+                    cars[j+1] = temp;
+                }
+            }
+
+        }
+    }
+
+    private static int compareCars(Car car1, Car car2){
+        if (car1.productionYear > car2.productionYear) return 1;
+        else if (car1.productionYear < car2.productionYear) return -1;
+        else return 0;
+    }
 }
 
 
