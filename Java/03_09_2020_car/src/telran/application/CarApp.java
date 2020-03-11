@@ -16,6 +16,7 @@ public class CarApp {
         sortCarsByYear(cars);
         System.out.println();
         sortCarsWithComparator(cars);
+        sortCarsWithComparator2(cars);
         printArrayCar(cars);
 
     }
