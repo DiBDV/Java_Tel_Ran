@@ -28,3 +28,27 @@ public class Main {
 public int compareDate (Date date1, Date date2){
 
 }
+
+//improved bubble sorting variant:
+public static void sort (Date[] dates){
+    boolean notSortFlag = true;
+    while (notSortFlag){
+        notSortFlag = false;
+        for (int j = 0; j < (dates.length - 1) ; j++){
+            if (comparatorDate(dates[j], dates[j + 1]) > 0) {
+                notSortFlag = true;
+                Date tmp = dates[j];
+                dates[j] = dates[j +1 ];
+                dates[j +1 ] = tmp;
+            }
+        }
+    }
+}
+
+/*
+
+    flag = true
+    while(flag){
+    check Scanner if value is correct flag = false
+    }
+ */
