@@ -2,7 +2,8 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        Employee em1 = new Employee("Nick", 1000);
+        //Employee em1 = new Employee("Nick", 1000); //Employee is abstract class
+        Employee em1 = new Programmer("Nick", 1000, 5); //
         System.out.println(em1);
 
         em1.doWork();
@@ -29,12 +30,21 @@ public class Main {
             employees[i].doWork();
         }
 
-        //экземпляк класса майн
+
+//        -----------------------------
+        System.out.println("------------ Programmer is an Employee -----------");
+        Employee progr2 = new Programmer("Andy", 1000, 1);
+        progr2.doWork();
+
+
+
+
+//        //экземпляр класса майн
 //        Main main1 = new Main();
 //        mai
-
-        User user = new User();
+//
+//        User user = new User();
 //        Object ==> Employee ==> Manager, Programmer
-        manager1.
+
     }
 }

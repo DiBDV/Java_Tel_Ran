@@ -2,19 +2,21 @@ package com.company;
 
 // пример как сделать наследования в ООП
 
-public class Employee {
+public abstract class Employee {
     private String name;
     private int salary;
     private int experience = 0;
+    private int bonus;
     protected int temp;
 
-    public Employee(String name, int salary, int experience) {
+
+    public Employee(String name, int salary, int experience, String bonus) {
         this.name = name;
         this.salary = salary;
         this.experience = experience;
     }
 
-    public Employee(String name, int salary) {
+    public Employee(String name, int salary, String bonus) {
         this.name = name;
         this.salary = salary;
     }
@@ -40,11 +42,8 @@ public class Employee {
                 '}';
     }
 
-    public void pay(){
-        System.out.println("I've got " + salary);
-    }
-
-    public void doWork(){
-        System.out.println("Employee: do my work");
-    }
+//    абстрактный метод
+    public abstract void pay();
+//    абстрактный метод
+    public abstract void doWork();
 }
