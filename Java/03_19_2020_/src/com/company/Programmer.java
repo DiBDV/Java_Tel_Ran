@@ -1,10 +1,11 @@
 package com.company;
 
-public class Programmer extends Employee {
+public class Programmer  {
+Employee emp;
 
 //    обязательно вызов конструктора родительского класса. как показано ниже
     public Programmer(String name, int salary, int experience) {
-        super(name,salary,experience);
+        Employee emp = new Employee(name,salary);
     }
 
 

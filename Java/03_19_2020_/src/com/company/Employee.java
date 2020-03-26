@@ -43,7 +43,7 @@ public abstract class Employee {
     }
 
 //    абстрактный метод
-    public abstract void pay();
+//    public abstract void pay();
 //    абстрактный метод
-    public abstract void doWork();
+//    public abstract void doWork();
 }
