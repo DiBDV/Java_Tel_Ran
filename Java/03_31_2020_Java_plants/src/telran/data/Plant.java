@@ -6,6 +6,9 @@ public abstract class  Plant {
     private int age;
 
     public Plant(String name, int height, int age) {
+        this.name = name;
+        this.height = height;
+        this.age = age;
     }
 
     public String getName() {
@@ -50,7 +53,6 @@ public abstract class  Plant {
         return "Plant{" +
                 "name='" + name + '\'' +
                 ", height=" + height +
-                ", age=" + age +
-                '}';
+                ", age=" + age +'}';
     }
 }
