@@ -8,7 +8,8 @@ public class FindNumbers {
 //        numberInRange(10,15);
 //        recursion1(20, 30);
 //        recursion2(7);
-        recursionSecondNumber(10, 20);
+//        recursionSecondNumber(10, 20);
+        recursionSecondNumber(11);
 
     }
     public static void findNumbers(int a, int b) {
@@ -46,17 +47,14 @@ public class FindNumbers {
 //            }
 //        }
 
-    public static void recursionSecondNumber(int num1, int num2){
-        if (num1 == num2) {
-            System.out.println(num1 + " ");
-        } else if (num1 < num2) {
-            recursionSecondNumber (num1, num2-2);
-            System.out.println(num2 + " ");
-        } else {
-            recursionSecondNumber (num1, num2+2);
-            System.out.println(num2 + " ");
+    public static void recursionSecondNumber(int n){
+        if (n<2) {
+            System.out.println(n + " ");
+        } else
+            recursionSecondNumber (n -2);
+            System.out.println(n + " ");
         }
-    }
+//    }
 
 
 //    public static String recursion2(int n){
@@ -66,7 +64,5 @@ public class FindNumbers {
 //            return recursion2(n-1) + " "  + n;
 //        }
 //    }
-
-
 
 }
