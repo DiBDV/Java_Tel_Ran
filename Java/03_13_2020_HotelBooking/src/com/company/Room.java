@@ -4,7 +4,7 @@ public abstract class Room {
     private String number;
     private int capacity;
 
-    protected abstract Room(String number, int capacity) {
+    public Room(String number, int capacity) {
         this.number = number;
         this.capacity = capacity;
     }
@@ -21,6 +21,10 @@ public abstract class Room {
     public int getCapacity() {
         return capacity;
     }
+
+    public abstract void tvEquipment();
+
+    public abstract void kitchen();
 
     @Override
     public String toString() {

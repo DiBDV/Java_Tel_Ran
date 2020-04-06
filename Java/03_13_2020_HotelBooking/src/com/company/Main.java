@@ -7,7 +7,17 @@ public class Main {
         Person p1= new Person("Ivan");
         System.out.println(p1);
 
-        Room r1 = new Room("1");
+        Room r1 = new Room("1") {
+            @Override
+            public void tvEquipment() {
+
+            }
+
+            @Override
+            public void kitchen() {
+
+            }
+        };
         System.out.println(r1);
 
         Date d1= new Date(1, 10, 2020);
