@@ -1,42 +1,57 @@
+import static java.lang.Math.max;
+
 public class Main {
 
     public static void main(String[] args) {
 
 //        Параметр weekday имеет значение true если это рабочий день недели, и параметр
 //        vacation имеет значение true если у нас каникулы. Мы спим, если это не рабочий день
-//        или у нас каникулы. Вернуть значение true, когда мы спим.
+//        или у нас каникулы. Вернуть значение true, когда мы спим. Например:
+//sleepIn(false, false) → true
+//sleepIn(true, false) → false
+//sleepIn(false, true) → true
         public boolean sleepIn(boolean weekday, boolean vacation) {
+            return (!weekday || vacation) ? true : false;
 
         }
 
 
 //        Дано целое число n , вернуть абсолютную разницу между n и 21, но вернуть
-//        удвоенную разницу, если n больше 21.
+//        удвоенную разницу, если n больше 21. Например:
+//diff21(19) → 2
+//diff21(10) → 11
+//diff21(21) → 0
+//diff21(25) → 8
         public int diff21(int n) {
-            if n > 21{
-                return int n*2;
+            if n > 21 {
+                return int(n - 21) * 2;
             }else{
-                return 21 - n;
+                return int(21 - n);
             }
+
         }
 
 
 //        Дана строка , вернуть новую строку, где последние 3 символа в верхнем регистре
 //        (заглавные). Если строка длины меньше 3, перевести это в заглавные.
+//        endUp("Hello") → "HeLLO"
+//        endUp("hi there") → "hi thERE"
+//        endUp("hi") → "HI"
         public String endUp(String str) {
-
+            System.out.println();
 
         }
 
 
 //        Даны три целых числы a b c, вернуть наибольшее.
-//                intMax(1, 2, 3) → 3
+//        intMax(1, 2, 3) → 3
 //        intMax(1, 3, 2) → 3
 //        intMax(3, 2, 1) → 3
         public int intMax(int a, int b, int c) {
-
-
+            System.out.println("The biggest number is: " + max(max(a,b), c));
         }
+
+
 
 
 
