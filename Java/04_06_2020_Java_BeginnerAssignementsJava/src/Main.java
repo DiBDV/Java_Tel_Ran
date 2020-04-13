@@ -2,7 +2,6 @@ import static java.lang.Math.max;
 
 public class Main {
 
-    public static void main(String[] args) {
 
 //        Параметр weekday имеет значение true если это рабочий день недели, и параметр
 //        vacation имеет значение true если у нас каникулы. Мы спим, если это не рабочий день
@@ -11,9 +10,12 @@ public class Main {
 //sleepIn(true, false) → false
 //sleepIn(false, true) → true
         public boolean sleepIn(boolean weekday, boolean vacation) {
+            weekday = true;
+            vacation = true;
             return (!weekday || vacation) ? true : false;
 
         }
+
 
 
 //        Дано целое число n , вернуть абсолютную разницу между n и 21, но вернуть
@@ -23,7 +25,7 @@ public class Main {
 //diff21(21) → 0
 //diff21(25) → 8
         public int diff21(int n) {
-            if n > 21 {
+            if (n > 21) {
                 return int(n - 21) * 2;
             }else{
                 return int(21 - n);
@@ -115,5 +117,5 @@ public class Main {
         public String middleTwo(String str) {
 
         }
-    }
+
 }
